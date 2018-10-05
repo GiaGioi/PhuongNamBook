@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tkgd.example.cuson.phuongnambook">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.activity.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.HomeActivity" />
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity android:name=".ui.activity.UserActivity" />
+        <activity android:name=".ui.activity.BookActivity" />
+        <activity android:name=".ui.activity.BillActivity" />
+        <activity android:name=".ui.activity.RevenueActivity" />
+        <activity android:name=".ui.activity.SellActivity" />
+        <activity android:name=".ui.activity.EditInfoUserActivity" />
+        <activity android:name=".ui.activity.EditBookTypeActivity" />
+        <activity android:name=".ui.activity.AddBillInfoActivity" />
+        <activity android:name=".ui.activity.AddBillActivity" />
+        <activity android:name=".ui.activity.AddUserActivity" />
+        <activity android:name=".ui.activity.AddBookActivity" />
+        <activity android:name=".ui.activity.ChangePasswActivity" />
+        <activity android:name=".ui.activity.BooktypeActivity" />
+        <activity android:name=".ui.activity.AddBooktypeActivity"/>
+    </application>
+
+</manifest>
