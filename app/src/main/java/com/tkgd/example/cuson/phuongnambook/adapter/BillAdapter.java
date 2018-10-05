@@ -36,7 +36,7 @@ public class BillAdapter extends BaseAdapter implements Filterable {
     public BillAdapter(Activity context, List<Bill> arrBill) {
         super();
         this.context = context;
-        this.arrBill = arrSortBill;
+        this.arrBill = arrBill;
         this.arrSortBill = arrBill;
         this.inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         billDAO = new BillDAO(context);
