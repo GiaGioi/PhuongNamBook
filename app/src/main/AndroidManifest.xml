@@ -30,6 +30,7 @@
         <activity android:name=".ui.activity.BillActivity" />
         <activity android:name=".ui.activity.RevenueActivity" />
         <activity android:name=".ui.activity.SellActivity" />
+        <activity android:name=".ui.activity.InfoBillActivity" />
         <activity android:name=".ui.activity.EditInfoUserActivity" />
         <activity android:name=".ui.activity.EditBookTypeActivity" />
         <activity android:name=".ui.activity.AddBillInfoActivity" />

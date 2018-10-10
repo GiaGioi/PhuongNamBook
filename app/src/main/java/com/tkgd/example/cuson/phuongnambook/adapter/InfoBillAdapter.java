@@ -16,27 +16,27 @@ import com.tkgd.example.cuson.phuongnambook.sqlitedao.InfoBillDAO;
 import java.util.List;
 
 public class InfoBillAdapter extends BaseAdapter {
-    List<InfoBill> arrBillList;
+    List<InfoBill> arrInfoBillList;
     public Activity context;
     public LayoutInflater inflater;
     InfoBillDAO infoBillDAO;
 
-    public InfoBillAdapter(Activity context, List<InfoBill> arrBillList) {
+    public InfoBillAdapter(Activity context, List<InfoBill> arrInfoBillList) {
         super();
         this.context = context;
-        this.arrBillList = arrBillList;
+        this.arrInfoBillList = arrInfoBillList;
         this.inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         infoBillDAO = new InfoBillDAO(context);
     }
 
     @Override
     public int getCount() {
-        return arrBillList.size();
+        return arrInfoBillList.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return arrBillList.get(position);
+        return arrInfoBillList.get(position);
     }
 
     public static class ViewHolder {
@@ -46,6 +46,7 @@ public class InfoBillAdapter extends BaseAdapter {
         TextView txtThanhTien;
         ImageView imgDelete;
     }
+//    aaaaaaaaa
 
     @Override
     public long getItemId(int position) {
@@ -61,21 +62,20 @@ public class InfoBillAdapter extends BaseAdapter {
             holder.txtMaSach = (TextView) convertView.findViewById(R.id.IDBook);
             holder.txtSoLuong = (TextView) convertView.findViewById(R.id.Amount);
             holder.txtGiaBia = (TextView) convertView.findViewById(R.id.Price);
-            holder.txtThanhTien = (TextView)
-                    convertView.findViewById(R.id.Money);
+            holder.txtThanhTien = (TextView) convertView.findViewById(R.id.Money);
             holder.imgDelete = (ImageView) convertView.findViewById(R.id.clear);
             holder.imgDelete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    infoBillDAO.deleteInfoBillByID(String.valueOf(arrBillList.get(position).getIdInfoBill()));
-                    arrBillList.remove(position);
+                    infoBillDAO.deleteInfoBillByID(String.valueOf(arrInfoBillList.get(position).getIdInfoBill()));
+                    arrInfoBillList.remove(position);
                     notifyDataSetChanged();
 
                 }
             });
         } else
             holder = (ViewHolder) convertView.getTag();
-        InfoBill _entry = (InfoBill) arrBillList.get(position);
+        InfoBill _entry = (InfoBill) arrInfoBillList.get(position);
         holder.txtMaSach.setText("Mã sách: " + _entry.getBook().getIdBook());
         holder.txtSoLuong.setText("Số lượng: " + _entry.getAmountPay());
         holder.txtGiaBia.setText("Giá bìa: " + _entry.getBook().getPrice() + " vnd");
@@ -89,7 +89,7 @@ public class InfoBillAdapter extends BaseAdapter {
     }
 
     public void changeDataset(List<InfoBill> items) {
-        this.arrBillList = items;
+        this.arrInfoBillList = items;
         notifyDataSetChanged();
     }
 }

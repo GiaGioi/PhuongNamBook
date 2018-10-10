@@ -71,7 +71,7 @@ public class InfoBillDAO {
     //getAll
     public List<InfoBill> getAllInfoBillByID(String maHoaDon) {
         List<InfoBill> dsHoaDonChiTiet = new ArrayList<>();
-        String sSQL = "SELECT idInfoBill, Bill.idBill,Bill.dop, \" + \"Book.idBook, Book.idTypeBook, Book.bookName, Book.author, Book.publisher, Book.price, \" + \"Book.amount,InfoBill.amountPay FROM InfoBill INNER JOIN Bill \" + \"on InfoBill.idBill = Bill.idBill INNER JOIN Book on Book.idBook = InfoBill.idBook where InfoBill.idBill = '" + maHoaDon + "' ";
+        String sSQL = "SELECT idInfoBill, Bill.idBill, Bill.dop, \" + \" Book.idBook, Book.idTypeBook, Book.bookName, Book.author, Book.publisher, Book.price, \" + \"Book.amount, InfoBill.amountPay FROM InfoBill INNER JOIN Bill \" + \"on InfoBill.idBill = Bill.idBill INNER JOIN Book on Book.idBook = InfoBill.idBook where InfoBill.idBill = '" + maHoaDon + "' ";
         Cursor c = db.rawQuery(sSQL, null);
         c.moveToFirst();
         try {

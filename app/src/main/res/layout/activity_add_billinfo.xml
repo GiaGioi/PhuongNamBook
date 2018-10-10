@@ -74,7 +74,7 @@
             android:layout_marginRight="4dp">
 
             <EditText
-                android:id="@+id/edtIDBill"
+                android:id="@+id/edtidbill"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/idBill"

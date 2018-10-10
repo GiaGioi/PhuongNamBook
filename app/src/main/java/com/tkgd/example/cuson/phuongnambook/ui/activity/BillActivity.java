@@ -68,7 +68,7 @@ public class BillActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Bill hoaDon = (Bill) parent.getItemAtPosition(position);
-                Intent intent = new Intent(BillActivity.this, AddBillActivity.class);
+                Intent intent = new Intent(BillActivity.this, InfoBillActivity.class);
                 Bundle b = new Bundle();
                 b.putString("IDBILL", hoaDon.getIdBill());
                 intent.putExtras(b);

@@ -46,7 +46,7 @@ public class AddBillInfoActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         edMaSach = (EditText) findViewById(R.id.edtIDBook);
-        edMaHoaDon = (EditText) findViewById(R.id.edtIDType);
+        edMaHoaDon = (EditText) findViewById(R.id.edtidbill);
         edSoLuong = (EditText) findViewById(R.id.edtAmount);
         lvCart = (ListView) findViewById(R.id.lvBillInfo);
         tvThanhTien = (TextView) findViewById(R.id.tvThanhtien);
