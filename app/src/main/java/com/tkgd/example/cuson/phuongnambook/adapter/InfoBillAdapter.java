@@ -46,7 +46,7 @@ public class InfoBillAdapter extends BaseAdapter {
         TextView txtThanhTien;
         ImageView imgDelete;
     }
-//    aaaaaaaaa
+// Commit code
 
     @Override
     public long getItemId(int position) {
